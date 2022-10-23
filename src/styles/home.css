@@ -1,0 +1,43 @@
+.home-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 100px;
+  }
+  
+  .houses {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    column-gap: 60px;
+    row-gap: 50px;
+    width: min(100%, 1240px);
+    margin-top: 43px;
+    padding: 50px;
+    border-radius: 25px;
+    background-color: var(--grey);
+  }
+  
+  .houses > * {
+    cursor: pointer;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .home-page {
+      padding: 20px;
+    }
+  
+    .houses {
+      display: block;
+      background-color: transparent;
+      padding: 0;
+      margin: 0;
+      border-radius: 10px;
+    }
+  
+    .houses > * {
+      display: block;
+      margin-top: 20px;
+    }
+  }

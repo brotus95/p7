@@ -1,0 +1,31 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: var(--black);
+    height: 209px;
+    width: 100%;
+  }
+  
+  .footer svg {
+    width: 122px;
+    height: 40px;
+  }
+  
+  .footer svg path {
+    fill: var(--white);
+  }
+  
+  .footer__info {
+    font-size: 24px;
+    margin-top: 34px;
+    color: var(--white);
+  }
+  
+  @media screen and (max-width: 768px) {
+    .footer__info {
+      margin-top: 20px;
+      font-size: 12px;
+    }
+  }

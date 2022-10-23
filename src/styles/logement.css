@@ -1,0 +1,50 @@
+.house-page {
+    padding: 25px 100px;
+  }
+  
+  .house-page-wrapper {
+    margin: 0 auto;
+    max-width: 1240px;
+  }
+  
+  .house-page section:nth-child(2) {
+    padding: 30px 0 20px 0;
+  }
+  
+  .descriptions {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .descriptions details:first-child {
+    padding-right: 5px;
+  }
+  
+  .descriptions details:last-child {
+    padding-left: 5px;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .house-page {
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .house-page section:nth-child(2) {
+      padding: 15px 0;
+    }
+    .descriptions {
+      display: block;
+    }
+  
+    .descriptions details {
+      padding-bottom: 20px;
+    }
+  
+    .descriptions details:first-child {
+      padding-right: 0px;
+    }
+  
+    .descriptions details:last-child {
+      padding: 0px;
+    }
+  }
