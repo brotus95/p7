@@ -4,7 +4,7 @@ import greyStar from "../../assets/images/logement/grey_star.svg";
 import React from "react";
 import PropTypes from "prop-types";
 
-const Notation = ({ rating }) => {
+const Rating = ({ rating }) => {
   const range = [1, 2, 3, 4, 5];
 
   return (
@@ -31,8 +31,8 @@ const Notation = ({ rating }) => {
   );
 };
 
-Notation.propTypes = {
+Rating.propTypes = {
   rating: PropTypes.string,
 };
 
-export default Notation;
+export default Rating;

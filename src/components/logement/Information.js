@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Tag from "./Tag";
-import Notation from "./Notation";
+import Rating from "./Rating";
 import "../../styles/information.css";
 
 const Information = ({ houseData }) => {
@@ -25,7 +25,7 @@ const Information = ({ houseData }) => {
             alt={`Portrait de ${houseData.host.name}`}
           />
         </div>
-        <Notation rating={houseData.rating} />
+        <Rating rating={houseData.rating} />
       </div>
     </section>
   );

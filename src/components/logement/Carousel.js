@@ -20,11 +20,11 @@ const Carousel = ({ imgList, title }) => {
   }
 
   const nextPicture = () => {
-    setCounter(counter === imgListLength - 1 ? 0 : counter + 1);
+    setCounter(counter === imgListLength ? 1 : counter + 1);
   };
 
   const previousPicture = () => {
-    setCounter(counter === 0 ? imgListLength - 1 : counter - 1);
+    setCounter(counter === 1 ? imgListLength : counter - 1);
   };
 
   return (

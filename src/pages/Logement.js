@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { useParams } from "react-router-dom";
 import Dropdown from "../components/about/Dropdown";
 import Information from "../components/logement/Information";
@@ -15,50 +15,6 @@ const House = () => {
   // House id
   console.log(id);
   //console.log(id);
-
-  /*useEffect(() => {
-    var responseClone; // 1
-    fetch("http://localhost:3000/logements.json")
-      .then(function (response) {
-        responseClone = response.clone(); // 2
-        return response.json();
-      })
-      .then(
-        function (data) {
-          // Do something with data
-          console.log(data);
-        },
-        function (rejectionReason) {
-          // 3
-          console.log(
-            "Error parsing JSON from response:",
-            rejectionReason,
-            responseClone
-          ); // 4
-          responseClone
-            .text() // 5
-            .then(function (bodyText) {
-              console.log(
-                "Received the following instead of valid JSON:",
-                bodyText
-              ); // 6
-            });
-        }
-      );
-
-    /*fetch("http://localhost:3000/logements.json", {
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        //setHouseData(...data.filter((house) => house.id === id));
-      })
-      .catch((err) => console.log(err)); ici
-  }, [id]);*/
 
   console.log(logement);
   console.log(logement.equipments);

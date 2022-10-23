@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 export function GetAllLogement(url) {
   const [data, setData] = useState({});
@@ -28,6 +29,7 @@ export function GetAllLogement(url) {
 export function GetLogementById(url, id) {
   const [data, setData] = useState({});
   const [isLoading, setLoading] = useState(true);
+  let navigate = useNavigate();
 
   useEffect(() => {
     if (!url) return;
@@ -40,7 +42,7 @@ export function GetLogementById(url, id) {
         if (filtredDataById === undefined) throw new Error("error 404");
         setData(filtredDataById);
       } catch (err) {
-        window.location.pathname = "/error";
+        navigate("/error/");
       } finally {
         setLoading(false);
       }
