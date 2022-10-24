@@ -2,9 +2,9 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 
 // Logo images
-import logo from "../assets/images/logo/logo_header.svg";
+import logo from "../../assets/images/logo/logo_header.svg";
 
-import styles from "../styles/Header.module.css";
+import styles from "./Header.module.css";
 
 const Header = () => {
   const { pathname } = useLocation();

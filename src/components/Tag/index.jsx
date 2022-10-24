@@ -1,9 +1,9 @@
 import React from "react";
-import "./tag.css";
+import styles from "./Tag.module.css";
 import PropTypes from "prop-types";
 
 const Tag = ({ children }) => {
-  return <div className="tag">{children}</div>;
+  return <div className={styles.tag}>{children}</div>;
 };
 
 Tag.propTypes = {

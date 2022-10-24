@@ -1,12 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./thumb.css";
+import styles from "./Thumb.module.css";
 
 const Thumb = ({ imgURL, imgALT, title }) => {
   return (
-    <article className="thumb">
+    <article className={styles.thumb}>
       <img src={imgURL} alt={imgALT} className="img" />
-      <h2 className="title">{title}</h2>
+      <h2 className={styles.title}>{title}</h2>
     </article>
   );
 };

@@ -1,12 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "../styles/loader.css";
+import styles from "./Loader.module.css";
 
 const LoaderJSX = () => (
-  <div className="loader">
-    <div className="content">
+  <div className={styles.loader}>
+    <div className={styles.content}>
       <h2>Loading...</h2>
-      <div className="loader-circle"></div>
+      <div className={styles["loader-circle"]}></div>
     </div>
   </div>
 );

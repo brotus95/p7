@@ -1,25 +1,25 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Tag from "./Tag";
-import Rating from "./Rating";
-import "../../styles/information.css";
+import Tag from "../Tag";
+import Rating from "../Rating";
+import styles from "./Information.module.css";
 
 const Information = ({ houseData }) => {
   const formattedHostName = houseData.host.name.replace(" ", "\n");
   return (
-    <section className="profile">
-      <div className="profile-left">
+    <section className={styles.profile}>
+      <div className={styles["profile-left"]}>
         <h1>{houseData.title}</h1>
-        <div className="location">{houseData.location}</div>
-        <div className="tags">
+        <div className={styles.location}>{houseData.location}</div>
+        <div className={styles.tags}>
           {houseData.tags.map((tag, index) => (
             <Tag key={tag + index}>{tag}</Tag>
           ))}
         </div>
       </div>
-      <div className="profile-right">
-        <div className="name-and-picture">
-          <div className="host-name">{formattedHostName}</div>
+      <div className={styles["profile-right"]}>
+        <div className={styles["name-and-picture"]}>
+          <div className={styles["host-name"]}>{formattedHostName}</div>
           <img
             src={houseData.host.picture}
             alt={`Portrait de ${houseData.host.name}`}

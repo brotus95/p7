@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import "../../styles/carousel.css";
+import styles from "./Carousel.module.css";
 import Chevron from "../UI/SVG/Chevron";
 
 const Carousel = ({ imgList, title }) => {
@@ -13,7 +13,7 @@ const Carousel = ({ imgList, title }) => {
 
   if (imgListLength === 1) {
     return (
-      <div className="carousel">
+      <div className={styles.carousel}>
         <img src={imgList[0]} alt={title} />
       </div>
     );
@@ -28,18 +28,18 @@ const Carousel = ({ imgList, title }) => {
   };
 
   return (
-    <div className="carousel">
-      <button className="chevron-left" onClick={previousPicture}>
+    <div className={styles.carousel}>
+      <button className={styles["chevron-left"]} onClick={previousPicture}>
         <Chevron />
       </button>
 
       <img src={imgList[counter - 1]} alt={title} />
 
-      <div className="counter">
+      <div className={styles.counter}>
         {counter}/{imgList.length}
       </div>
 
-      <button className="chevron-right" onClick={nextPicture}>
+      <button className={styles["chevron-right"]} onClick={nextPicture}>
         <Chevron />
       </button>
     </div>
