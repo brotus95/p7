@@ -1,5 +1,8 @@
+//import react
 import React from "react";
 import styles from "./Tag.module.css";
+
+//import css
 import PropTypes from "prop-types";
 
 const Tag = ({ children }) => {

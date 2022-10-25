@@ -1,6 +1,11 @@
+//import react
 import React from "react";
+
+//import components
 import Banner from "../../components/Banner";
 import Dropdown from "../../components/Dropdown";
+
+//import css & datas
 import aboutData from "../../datas/about";
 import styles from "./About.module.css";
 

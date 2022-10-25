@@ -1,9 +1,13 @@
+//import react
 import React from "react";
+import { useLocation } from "react-router-dom";
+
+//import css & assets
 import styles from "./Banner.module.css";
 import homeImg from "../../assets/images/home/banner.png";
 import aboutImg from "../../assets/images/about/background.png";
-import { useLocation } from "react-router-dom";
 
+//renvoie une image differente en fonction de la page où on se situe grâce à useLocation
 const Banner = () => {
   const { pathname } = useLocation();
   if (pathname === "/")

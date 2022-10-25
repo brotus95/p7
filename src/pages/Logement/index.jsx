@@ -1,35 +1,26 @@
+//import react
 import React from "react";
 import { useParams } from "react-router-dom";
+
+//import components
 import Dropdown from "../../components/Dropdown";
 import Information from "../../components/Information";
 import Loader from "../../components/Loader";
-import styles from "./Logement.module.css";
-import { GetLogementById } from "../../utils/webService";
 import Carousel from "../../components/Carousel";
 
+//import css & util
+import styles from "./Logement.module.css";
+import { GetLogementById } from "../../utils/webService";
+
 const House = () => {
+  //recupere id dans url
   const { id } = useParams();
   const { data, isLoading } = GetLogementById("/logements.json", id);
   const logement = data;
-  console.log(data);
-  // House id
-  console.log(id);
-  //console.log(id);
 
-  console.log(logement);
-  console.log(logement.equipments);
-  console.log(logement.description);
-  /*const logementEquipments = logement.equipments;
-  console.log(logementEquipments);
-  let equipmentString = logementEquipments.join("\n");
-  console.log(equipmentString);
-  function reducer(previousValue, currentValue, currentIndex) {
-    return currentIndex == 0
-      ? currentValue
-      : previousValue + "\n" + currentValue;
-  }
-  console.log(logementEquipments.reduce(reducer));*/
-
+  //si erreur lors du fetch alors renvoie vers la page 404 grace a useNavigate
+  //si temps de chargement alors affiche ecran de chargement
+  //sinon affiche la page logement avec les informations
   return isLoading ? (
     <Loader />
   ) : (

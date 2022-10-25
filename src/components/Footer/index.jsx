@@ -1,10 +1,10 @@
+//import react
 import React from "react";
+
+//import css & assets
 import Logo from "../../assets/images/logo/logo_footer.svg";
 import styles from "./Footer.module.css";
 
-/**
- * @returns {JSX.Element} Footer Component
- */
 const Footer = () => {
   return (
     <footer className={styles.footer}>

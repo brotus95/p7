@@ -1,12 +1,16 @@
+//import react
 import React from "react";
 import PropTypes from "prop-types";
-import styles from "./Dropdown.module.css";
 import { useLocation } from "react-router-dom";
+
+//import styles & assets
+import styles from "./Dropdown.module.css";
 import Chevron from "../UI/SVG/Chevron";
 
 const Dropdown = ({ title, description }) => {
   const { pathname } = useLocation();
   const isAboutPage = pathname === "/about";
+  //styles légèrement différent selon la page où est appelé le dropdown
   const detailsStyles = isAboutPage
     ? styles.details
     : `${styles.details} ${styles["house-page-details"]}`;
@@ -15,6 +19,7 @@ const Dropdown = ({ title, description }) => {
       <summary>
         {title} <Chevron />
       </summary>
+      {/* description accepte les string mais aussi les array pour pouvoir lister les equipements disponibles. Se fait via le propTypes plus bas */}
       {Array.isArray(description) ? (
         <ul className="dropdown__list">
           {description.map((equipment) => (

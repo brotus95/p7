@@ -1,7 +1,12 @@
+//import react
 import React from "react";
 import PropTypes from "prop-types";
+
+//import components
 import Tag from "../Tag";
 import Rating from "../Rating";
+
+//import css
 import styles from "./Information.module.css";
 
 const Information = ({ houseData }) => {

@@ -1,5 +1,8 @@
+//import react
 import React from "react";
 import PropTypes from "prop-types";
+
+//import css
 import styles from "./Thumb.module.css";
 
 const Thumb = ({ imgURL, imgALT, title }) => {

@@ -1,5 +1,8 @@
+//import react
 import React from "react";
 import ReactDOM from "react-dom";
+
+//import css
 import styles from "./Loader.module.css";
 
 const LoaderJSX = () => (
