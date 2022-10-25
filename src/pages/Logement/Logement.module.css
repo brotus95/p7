@@ -16,14 +16,6 @@
     justify-content: space-between;
   }
   
-  .descriptions details:first-child {
-    padding-right: 5px;
-  }
-  
-  .descriptions details:last-child {
-    padding-left: 5px;
-  }
-  
   @media screen and (max-width: 768px) {
     .house-page {
       margin: 0 auto;

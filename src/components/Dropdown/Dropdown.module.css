@@ -2,8 +2,6 @@
     width: min(100%, 1023px);
     font-size: 24px;
     background: var(--grey);
-    padding-right: 0px;
-    padding-left: 0px;
   }
   
   .house-page-details {
