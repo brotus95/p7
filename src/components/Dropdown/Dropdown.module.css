@@ -1,6 +1,9 @@
 .details {
     width: min(100%, 1023px);
     font-size: 24px;
+    background: var(--grey);
+    padding-right: 0px;
+    padding-left: 0px;
   }
   
   .house-page-details {
@@ -19,6 +22,7 @@
     background-color: var(--primary-color);
     color: var(--white);
     font-weight: normal;
+    width: 100%;
   }
   
   .house-page-details summary {
@@ -43,22 +47,30 @@
     transform: rotate(0);
   }
   
-  .details p {
+  .details p, .details ul {
     min-height: 146px;
     border-radius: 5px;
-    background: var(--grey);
     color: var(--primary-color);
-    padding: 18px;
+    padding: 18px 23px;
     white-space: pre-wrap;
+    background: inherit;
+    font-size: 18px;
   }
   
   .house-page-details p {
     min-height: 249px;
     font-size: 18px;
   }
+
+  .dropdown__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+  }
   
   @media screen and (max-width: 768px) {
-    .details {
+    .details p, .details ul{
       font-size: 12px;
     }
     .house-page-details {

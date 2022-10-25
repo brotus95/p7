@@ -15,14 +15,24 @@ const Dropdown = ({ title, description }) => {
       <summary>
         {title} <Chevron />
       </summary>
-      <p>{description}</p>
+      {Array.isArray(description) ? (
+        <ul className="dropdown__list">
+          {description.map((equipment) => (
+            <li key={equipment} className="dropdown__list-element">
+              {equipment}
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p>{description}</p>
+      )}
     </details>
   );
 };
 
 Dropdown.propTypes = {
   title: PropTypes.string,
-  description: PropTypes.string,
+  description: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
 };
 
 export default Dropdown;

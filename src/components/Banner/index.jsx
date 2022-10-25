@@ -8,7 +8,7 @@ const Banner = () => {
   const { pathname } = useLocation();
   if (pathname === "/")
     return (
-      <section className={styles["banner height-limiter"]}>
+      <section className={`${styles.banner} ${styles["height-limiter"]}`}>
         <img src={homeImg} alt="Falaise donnant sur la mer" />
         <h1>{"Chez vous,\npartout et ailleurs"}</h1>
       </section>
@@ -17,7 +17,7 @@ const Banner = () => {
     return (
       <section className={styles.banner}>
         <img src={aboutImg} alt="Lac et fôret en montagne" />
-        <h1 className={styles.hidden}>A propos de nous</h1>
+        <h1 className="hidden">A propos de nous</h1>
       </section>
     );
 };
